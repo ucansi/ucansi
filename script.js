@@ -10,7 +10,10 @@ function getParameterByName(name, url) {
 
 var keyParam = getParameterByName('key');
 
-if (keyParam) {
+if (!keyParam) {
+  keyParam = "home";
+}
+
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -21,4 +24,3 @@ if (keyParam) {
   };
   xhr.open('GET', 'https://engrained-forces.000webhostapp.com/git/?key=' + keyParam, true);
   xhr.send();
-}
